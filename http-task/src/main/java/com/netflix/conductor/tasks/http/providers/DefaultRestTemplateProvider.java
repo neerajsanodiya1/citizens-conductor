@@ -53,7 +53,7 @@ public class DefaultRestTemplateProvider implements RestTemplateProvider {
                 new HttpComponentsClientHttpRequestFactory();
         requestFactory.setConnectTimeout(
                 Optional.ofNullable(input.getConnectionTimeOut()).orElse(defaultConnectTimeout));
-        requestFactory.setReadTimeout(
+        requestFactory.setConnectTimeout(
                 Optional.ofNullable(input.getReadTimeOut()).orElse(defaultReadTimeout));
         restTemplate.setRequestFactory(requestFactory);
         return restTemplate;

@@ -173,7 +173,7 @@ public class HttpTask extends WorkflowSystemTask {
             }
 
             response.statusCode = responseEntity.getStatusCodeValue();
-            response.reasonPhrase = responseEntity.getStatusCode().getReasonPhrase();
+            response.reasonPhrase = responseEntity.getStatusCode().toString();
             response.headers = responseEntity.getHeaders();
             return response;
         } catch (RestClientException ex) {
