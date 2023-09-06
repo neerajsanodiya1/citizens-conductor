@@ -20,6 +20,9 @@ dependencies {
     implementation project(':conductor-rest')
     implementation project(':conductor-core')
     implementation project(':conductor-cassandra-persistence')
+    implementation project(':conductor-common-persistence')
+    implementation project(':conductor-postgres-persistence')
+    implementation project(':conductor-mysql-persistence')
     implementation project(':conductor-es6-persistence')
     implementation project(':conductor-grpc-server')
     implementation project(':conductor-redis-lock')
@@ -41,6 +44,9 @@ dependencies {
     implementation "org.springdoc:springdoc-openapi-ui:${revOpenapi}"
 
     runtimeOnly "org.glassfish.jaxb:jaxb-runtime:${revJAXB}"
+
+    // https://mvnrepository.com/artifact/com.netflix.conductor/conductor-postgres-persistence
+    runtimeOnly "com.netflix.conductor:conductor-postgres-persistence:3.13.8"
 
     testImplementation project(':conductor-rest')
     testImplementation project(':conductor-common')
