@@ -38,7 +38,8 @@ dependencies {
  *  specific language governing permissions and limitations under the License.
  */
 
-task protogen(dependsOn: jar, type: JavaExec) {
+tasks.register('protogen', JavaExec) {
+    dependsOn jar
     classpath configurations.annotationsProcessorCodegen
     mainClass = "com.netflix.conductor.annotationsprocessor.protogen.ProtoGenTask"
     args(
