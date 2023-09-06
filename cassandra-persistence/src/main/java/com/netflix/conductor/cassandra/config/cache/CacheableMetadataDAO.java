@@ -151,6 +151,7 @@ public class CacheableMetadataDAO implements MetadataDAO {
     private List<TaskDef> refreshTaskDefsCache() {
         try {
             Cache taskDefsCache = cacheManager.getCache(TASK_DEF_CACHE);
+            assert taskDefsCache != null;
             taskDefsCache.clear();
             List<TaskDef> taskDefs = cassandraMetadataDAO.getAllTaskDefs();
             taskDefs.forEach(taskDef -> taskDefsCache.put(taskDef.getName(), taskDef));

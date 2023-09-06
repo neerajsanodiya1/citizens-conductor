@@ -60,7 +60,7 @@ public class JsonProtoModule extends SimpleModule {
      * other arbitrary ProtoBuf message in a type-safe way, even when the server has no knowledge of
      * the schema of the stored message.
      *
-     * <p>It accomplishes this by storing a tuple of information: an URL-like type declaration for
+     * <p>It accomplishes this by storing a tuple of information: a URL-like type declaration for
      * the stored message, and the serialized binary encoding of the stored message itself. Language
      * specific implementations of ProtoBuf provide helper methods to encode and decode arbitrary
      * messages into an {@link Any} object ({@link Any#pack(Message)} in Java).
