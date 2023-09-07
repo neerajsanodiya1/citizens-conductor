@@ -113,7 +113,7 @@ public class CassandraEventHandlerDAO extends CassandraBaseDAO implements EventH
             ResultSet resultSet =
                     session.execute(selectAllEventHandlersStatement.bind(HANDLERS_KEY));
             List<Row> rows = resultSet.all();
-            if (rows.size() == 0) {
+            if (rows.isEmpty()) {
                 LOGGER.info("No event handlers were found.");
                 return Collections.EMPTY_LIST;
             }
