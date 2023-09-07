@@ -1,7 +1,7 @@
 {
     "annotationProcessor": {
         "org.springframework.boot:spring-boot-configuration-processor": {
-            "locked": "2.7.3"
+            "locked": "3.1.3"
         }
     },
     "compileClasspath": {
@@ -33,7 +33,7 @@
             "locked": "2.17.2"
         },
         "org.springframework.boot:spring-boot-starter": {
-            "locked": "2.7.3"
+            "locked": "3.1.3"
         }
     },
     "runtimeClasspath": {
@@ -238,10 +238,10 @@
             "locked": "1.3-groovy-2.5"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.3"
+            "locked": "3.1.3"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.3"
+            "locked": "3.1.3"
         },
         "org.testcontainers:cassandra": {
             "locked": "1.15.3"
@@ -420,10 +420,10 @@
             "locked": "1.3-groovy-2.5"
         },
         "org.springframework.boot:spring-boot-starter-log4j2": {
-            "locked": "2.7.3"
+            "locked": "3.1.3"
         },
         "org.springframework.boot:spring-boot-starter-test": {
-            "locked": "2.7.3"
+            "locked": "3.1.3"
         },
         "org.testcontainers:cassandra": {
             "locked": "1.15.3"
