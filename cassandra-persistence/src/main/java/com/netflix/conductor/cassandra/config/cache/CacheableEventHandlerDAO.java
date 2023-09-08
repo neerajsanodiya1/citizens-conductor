@@ -20,7 +20,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-import jakarta.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -119,7 +119,6 @@ public class CacheableEventHandlerDAO implements EventHandlerDAO {
     private List<EventHandler> refreshEventHandlersCache() {
         try {
             Cache eventHandlersCache = cacheManager.getCache(EVENT_HANDLER_CACHE);
-            assert eventHandlersCache != null;
             eventHandlersCache.clear();
             List<EventHandler> eventHandlers = cassandraEventHandlerDAO.getAllEventHandlers();
             eventHandlers.forEach(

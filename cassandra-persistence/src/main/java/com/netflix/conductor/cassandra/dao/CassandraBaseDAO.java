@@ -66,7 +66,7 @@ import static com.netflix.conductor.cassandra.util.Constants.WORKFLOW_VERSION_KE
  * <p>CREATE KEYSPACE IF NOT EXISTS conductor WITH replication = { 'class' :
  * 'NetworkTopologyStrategy', 'us-east': '3'};
  *
- * <p>CREATE TABLE IF NOT EXISTS conductor. Workflows ( workflow_id uuid, shard_id int, task_id text,
+ * <p>CREATE TABLE IF NOT EXISTS conductor.workflows ( workflow_id uuid, shard_id int, task_id text,
  * entity text, payload text, total_tasks int STATIC, total_partitions int STATIC, PRIMARY
  * KEY((workflow_id, shard_id), entity, task_id) );
  *
