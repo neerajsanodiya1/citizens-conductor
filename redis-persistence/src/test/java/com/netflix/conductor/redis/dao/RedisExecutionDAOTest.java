@@ -12,6 +12,11 @@
  */
 package com.netflix.conductor.redis.dao;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
@@ -23,6 +28,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.netflix.conductor.common.config.TestObjectMapperConfiguration;
 import com.netflix.conductor.common.metadata.tasks.TaskDef;
 import com.netflix.conductor.core.config.ConductorProperties;
@@ -33,13 +39,7 @@ import com.netflix.conductor.redis.config.RedisProperties;
 import com.netflix.conductor.redis.jedis.JedisMock;
 import com.netflix.conductor.redis.jedis.JedisProxy;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.commands.JedisCommands;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 @ContextConfiguration(classes = {TestObjectMapperConfiguration.class})
 @RunWith(SpringRunner.class)
@@ -89,8 +89,8 @@ public class RedisExecutionDAOTest extends ExecutionDAOTest {
         assertEquals(taskId, tasks.get(0).getTaskId());
     }
 
-    @Override
-    protected ExecutionDAO getExecutionDAO() {
+	@Override
+	protected ExecutionDAO getExecutionDAO() {
         return executionDAO;
     }
 }

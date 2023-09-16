@@ -29,7 +29,6 @@ repositories{
 
 dependencies {
     implementation project(':conductor-common')
-
     implementation "com.google.protobuf:protobuf-java:${revProtoBuf}"
     implementation "io.grpc:grpc-protobuf:${revGrpc}"
     implementation "io.grpc:grpc-stub:${revGrpc}"

@@ -18,12 +18,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
+import jakarta.validation.spi.ValidationProvider;
 
-import org.apache.bval.jsr.ApacheValidationProvider;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -50,7 +50,7 @@ public class WorkflowDefConstraintTest {
     @BeforeClass
     public static void init() {
         validatorFactory =
-                Validation.byProvider(ApacheValidationProvider.class)
+                Validation.byProvider(ValidationProvider.class)
                         .configure()
                         .buildValidatorFactory();
         validator = validatorFactory.getValidator();

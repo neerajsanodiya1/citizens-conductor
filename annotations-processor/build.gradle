@@ -16,7 +16,7 @@ dependencies {
     exampleImplementation project(':conductor-annotations')
 }
 
-task exampleJar(type: Jar) {
+tasks.register('exampleJar', Jar) {
     archiveFileName = 'example.jar'
     from sourceSets.example.output.classesDirs
 }
