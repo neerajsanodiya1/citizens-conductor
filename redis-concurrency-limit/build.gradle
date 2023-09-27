@@ -10,6 +10,22 @@ dependencies {
     implementation project(':conductor-core')
     implementation "redis.clients:jedis:3.6.0" // Jedis version "revJedis=3.3.0" does not play well with Spring Data Redis
     implementation "org.apache.commons:commons-lang3"
+	
+	implementation('com.fasterxml.jackson.core:jackson-core') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('com.fasterxml.jackson.core:jackson-databind') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('org.yaml:snakeyaml') {
+        version {
+            strictly '2.0'
+        }
+    }
 
     testImplementation "org.codehaus.groovy:groovy-all:${revGroovy}"
     testImplementation "org.spockframework:spock-core:${revSpock}"

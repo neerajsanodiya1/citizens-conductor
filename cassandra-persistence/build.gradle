@@ -19,6 +19,22 @@ dependencies {
     implementation project(':conductor-core')
     implementation "com.datastax.cassandra:cassandra-driver-core:${revCassandra}"
     implementation "org.apache.commons:commons-lang3"
+	
+	implementation('com.fasterxml.jackson.core:jackson-core') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('com.fasterxml.jackson.core:jackson-databind') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('org.yaml:snakeyaml') {
+        version {
+            strictly '2.0'
+        }
+    }
 
     testImplementation project(':conductor-core').sourceSets.test.output
     testImplementation project(':conductor-common').sourceSets.test.output

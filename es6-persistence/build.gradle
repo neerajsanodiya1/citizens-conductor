@@ -26,6 +26,22 @@ dependencies {
     implementation "org.elasticsearch.client:transport"
     implementation "org.elasticsearch.client:elasticsearch-rest-client"
     implementation "org.elasticsearch.client:elasticsearch-rest-high-level-client"
+	
+	implementation('com.fasterxml.jackson.core:jackson-core') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('com.fasterxml.jackson.core:jackson-databind') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('org.yaml:snakeyaml') {
+        version {
+            strictly '2.0'
+        }
+    }
 
     testImplementation 'org.springframework.retry:spring-retry'
     testImplementation "org.awaitility:awaitility:${revAwaitility}"

@@ -36,6 +36,22 @@ dependencies {
     implementation "commons-io:commons-io:${revCommonsIo}"
 
     implementation "org.slf4j:slf4j-api"
+	
+	implementation('com.fasterxml.jackson.core:jackson-core') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('com.fasterxml.jackson.core:jackson-databind') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('org.yaml:snakeyaml') {
+        version {
+            strictly '2.0'
+        }
+    }
 
     testImplementation "org.powermock:powermock-module-junit4:${revPowerMock}"
     testImplementation "org.powermock:powermock-api-mockito2:${revPowerMock}"

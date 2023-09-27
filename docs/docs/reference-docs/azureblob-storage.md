@@ -19,9 +19,7 @@ Cf. Documentation [External Payload Storage](https://netflix.github.io/conductor
 conductor.additional.modules=com.netflix.conductor.azureblob.AzureBlobModule
 es.set.netty.runtime.available.processors=false
 
-workflow.external.payload.storage=AZURE_BLOB
-workflow.external.payload.storage.azure_blob.connection_string=DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;EndpointSuffix=localhost
-workflow.external.payload.storage.azure_blob.signedurlexpirationseconds=360
+
 ```
 
 ## Testing

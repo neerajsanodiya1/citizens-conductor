@@ -4,6 +4,23 @@ configurations {
 
 dependencies {
     implementation project(':conductor-annotations')
+	
+	implementation('com.fasterxml.jackson.core:jackson-core') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('com.fasterxml.jackson.core:jackson-databind') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('org.yaml:snakeyaml') {
+        version {
+            strictly '2.0'
+        }
+    }
+		
     annotationsProcessorCodegen project(':conductor-annotations-processor')
 
     compileOnly 'org.springframework.boot:spring-boot-starter'

@@ -40,6 +40,22 @@ dependencies {
     implementation "org.apache.bval:bval-jsr:${revBval}"
 
     implementation "com.github.ben-manes.caffeine:caffeine"
+	
+	implementation('com.fasterxml.jackson.core:jackson-core') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('com.fasterxml.jackson.core:jackson-databind') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('org.yaml:snakeyaml') {
+        version {
+            strictly '2.0'
+        }
+    }
 
     implementation "org.openjdk.nashorn:nashorn-core:15.4"
 

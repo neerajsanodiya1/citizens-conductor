@@ -2,6 +2,22 @@ dependencies {
     implementation project(':conductor-common')
     implementation project(':conductor-core')
     implementation project(':conductor-grpc')
+	
+	implementation('com.fasterxml.jackson.core:jackson-core') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('com.fasterxml.jackson.core:jackson-databind') {
+        version {
+            strictly '2.15.0-rc1'
+        }
+    }
+	implementation('org.yaml:snakeyaml') {
+        version {
+            strictly '2.0'
+        }
+    }
 
     compileOnly 'org.springframework.boot:spring-boot-starter'
 

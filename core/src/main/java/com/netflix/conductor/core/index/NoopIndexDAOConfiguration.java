@@ -22,8 +22,8 @@ import com.netflix.conductor.dao.IndexDAO;
 @ConditionalOnProperty(name = "conductor.indexing.enabled", havingValue = "false")
 public class NoopIndexDAOConfiguration {
 
-    @Bean
-    public IndexDAO noopIndexDAO() {
-        return new NoopIndexDAO();
-    }
+//    @Bean
+//    public IndexDAO noopIndexDAO() {
+//        return new NoopIndexDAO();
+//    }
 }
